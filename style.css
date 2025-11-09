@@ -1,15 +1,15 @@
-/* БАЗА: как на десктопном скриншоте */
+
 :root {
-  --border: #2e8b57;       /* зелёная рамка как на макете */
+  --border: #2e8b57;       /* зелёная рамка*/
   --text: #111;            /* основной цвет текста (десктоп) */
-  --mobile-text: #0e6a3a;  /* слегка зелёный текст для условия ЛР */
+  --mobile-text: #0e6a3a;  /* зелёный текст для маленькго*/
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: "Times New Roman", Georgia, serif; /* ближе к виду на скрине */
+  font-family: "Times New Roman", Georgia, serif;
   color: var(--text);
   background: #fff;
   text-align: center;
@@ -17,7 +17,7 @@ body {
 
 h1 {
   margin: 18px 0 8px;
-  font-size: 64px;         /* крупный заголовок, как на скрине */
+  font-size: 64px;        
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -34,7 +34,7 @@ h1 {
 .card {
   border: 2px solid var(--border);
   padding: 16px;
-  text-align: left;        /* текстовый блок как на скрине */
+  text-align: left;        /* текстовый блок*/
 }
 
 .card img {
@@ -44,21 +44,18 @@ h1 {
   margin: 0 auto 12px;
 }
 
-/* ====== АДАПТИВ ====== */
-/* Планшеты и меньше — уже колонки поуже, но всё ещё сетка */
 @media (max-width: 800px) {
   h1 { font-size: 48px; }
   .wrapper { gap: 18px; }
 }
 
-/* Мобайл: одна колонка, как на мобильном скрине.
-   Плюс минимальная смена цвета текста (требование ЛР). */
+
 @media (max-width: 480px) {
-  body { color: var(--mobile-text); } /* смена цвета текста по заданию */
-  h1   { color: var(--mobile-text); } /* чтобы явно было видно */
+  body { color: var(--mobile-text); } /* смена цвета текста*/
+  h1   { color: var(--mobile-text); } 
   .wrapper {
     grid-template-columns: 1fr;
-    max-width: 440px;      /* ширина колонки как на мобильном скрине */
+    max-width: 440px;     
     padding: 8px 16px 28px;
   }
   .card {
@@ -67,7 +64,6 @@ h1 {
   h1 { font-size: 36px; margin-top: 14px; }
 }
 
-/* Совсем маленькие экраны */
 @media (max-width: 420px) {
   h1 { font-size: 32px; }
   .wrapper { max-width: 360px; }
